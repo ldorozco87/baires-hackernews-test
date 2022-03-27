@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import-normalize;
+
+// variables
+$smBreakpoint: 420;
+:root {
+  --color-primary: #0272b1;
+  --color-secondary-dark: #8b8b8b;
+  --color-secondary-darkened: #6f6f6f;
+  --color-secondary: #f1f1f1;
+  --color-tertiary: #35322c;
+  --color-white: #ffffff;
+}
+
+// layout
+* {
+  font-family: "Lato", sans-serif;
+  color: var(--color-tertiary);
+}
+body {
+  background-color: var(--color-secondary);
+}
+span,
+em {
+  color: inherit;
+}
+
+// display helpers
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-xs-none {
+  @media screen and (max-width: #{$smBreakpoint - 1}px) {
+    display: none;
+  }
+}
+.d-sm-inline {
+  @media screen and (min-width: #{$smBreakpoint}px) {
+    display: inline;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+
+// text helpers
+.text-center {
+  text-align: center;
+}
