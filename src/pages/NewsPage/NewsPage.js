@@ -26,7 +26,6 @@ const NewsPage = () => {
   };
 
   useEffect(() => {
-    // setIsLoading(true);
     const fetchData = async () => {
       try {
         const { data } = await axios.get(EndPoint, { params: { query } });
@@ -54,7 +53,6 @@ const NewsPage = () => {
 
         <Search
           onChange={(event) => handleOnchange(event)}
-          // onChange={(event) => setSearchInput(event.target.value)}
           onSubmit={handleSubmit}
           placeholder="Search news ..."
           value={searchInput}
